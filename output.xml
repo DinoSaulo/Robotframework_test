@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-27T15:04:58.271322" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Tests" source="C:\Users\saulo\projects\Robotframework_test\amazon_tests.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-27T15:04:58.854845" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-27T15:04:58.854469" elapsed="1.844707"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-27T15:05:00.699435" elapsed="0.039764"/>
+</kw>
+<status status="PASS" start="2025-02-27T15:04:58.853195" elapsed="1.886264"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-27T15:05:00.740655" level="INFO">Opening url 'http://amazon.com.br'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-27T15:05:00.740413" elapsed="0.850928"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${LOGO_VALIDATION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-27T15:05:01.591657" elapsed="1.220115"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-27T15:05:02.812170" elapsed="0.031027"/>
+</kw>
+<status status="PASS" start="2025-02-27T15:05:00.740013" elapsed="2.103509"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" owner="amazon_resources" source_name="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-27T15:05:02.858516" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-27T15:05:02.844927" elapsed="0.013914"/>
+</kw>
+<status status="PASS" start="2025-02-27T15:05:02.844289" elapsed="0.014940"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-27T15:05:02.860666" elapsed="2.203418"/>
+</kw>
+<status status="PASS" start="2025-02-27T15:05:02.860092" elapsed="2.204199"/>
+</kw>
+<doc>Este teste verifica o menu eletrônicos no site a Amazon
+e verifica a categoria Computadores e Informatica</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="PASS" start="2025-02-27T15:04:58.849763" elapsed="6.214819"/>
+</test>
+<doc>Essa suite testa o site da Amazon</doc>
+<status status="PASS" start="2025-02-27T15:04:58.273338" elapsed="6.792368"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+</tag>
+<suite>
+<stat name="Amazon Tests" id="s1" pass="1" fail="0" skip="0">Amazon Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
